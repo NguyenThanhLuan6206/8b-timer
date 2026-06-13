@@ -7,6 +7,9 @@ An 8-bit timer IP with APB interface, designed and verified using SystemVerilog.
 This project is a good practice for getting familiar with:
 - SystemVerilog design and verification
 - Basic UVM concepts (not fully implemented and not call factory)
+- using perl scripts (sim/regress.pl)
+- example of configuation file format (sim/regress.cfg)
+- basic functional coverage
 
 
 ## Project Structure
