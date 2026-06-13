@@ -4,14 +4,10 @@ An 8-bit timer IP with APB interface, designed and verified using SystemVerilog.
 
 ## Overview
 
-This project demonstrates design verification and implementation of a simple timer module with the following features:
+This project is a good practice for getting familiar with:
+- SystemVerilog design and verification
+- Basic UVM concepts (not fully implemented and not call factory)
 
-- **8-bit counter** with count up and count down modes
-- **APB slave interface** for register configuration
-- **Clock division** (no divide, divide by 2/4/8)
-- **Interrupt generation** with enable control
-- **Dual clock domains**: PCLK (50 MHz) and KER_CLK (200 MHz)
-- **Error handling** with wait state support
 
 ## Project Structure
 
@@ -29,30 +25,7 @@ This project demonstrates design verification and implementation of a simple tim
 └── README.md            # This file
 ```
 
-## Quick Start
 
-For **complete documentation**, including:
-- Register specifications (TCR, TSR, TDR, TIE)
-- Functional descriptions
-- Block diagrams and schematics
-- Waveform analysis
-- Design details
-
-See [doc/8_bit_timer.md](doc/8_bit_timer.md)
-
-## Key Components
-
-| File | Description |
-|------|-------------|
-| `APB_SLAVE.sv` | APB interface handler |
-| `CLK_DIV.sv` | Clock divisor block |
-| `COUNTER.sv` | 8-bit counter core |
-| `INTERRUPT.sv` | Interrupt generation logic |
-| `TCR.sv` | Timer Configuration Register |
-| `TSR.sv` | Timer Status Register |
-| `TDR.sv` | Timer Data Register |
-| `TIE.sv` | Timer Interrupt Enable Register |
-| `timer_top.sv` | Top-level module |
 
 ## Documentation
 
