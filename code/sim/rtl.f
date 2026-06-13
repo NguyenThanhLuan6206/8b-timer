@@ -1,0 +1,9 @@
+../rtl/APB_SLAVE.sv
+../rtl/CLK_DIV.sv
+../rtl/COUNTER.sv
+../rtl/INTERRUPT.sv
+../rtl/TCR.sv
+../rtl/TSR.sv
+../rtl/TDR.sv
+../rtl/TIE.sv
+../rtl/timer_top.sv

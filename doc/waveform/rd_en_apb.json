@@ -1,0 +1,33 @@
+{
+  "config": {
+    "hscale": 1.5,
+    "skin": "default"
+  },
+  "signal": [
+    {"name": "pclk",         "wave": "p..........."},
+    {"name": "presetn",      "wave": "01.........."},
+    {},
+    ["APB Bus",
+      {"name": "psel",       "wave": "0.1..01..0.."},
+      {"name": "pwrite",     "wave": "0.1..0......"},
+      {"name": "penable",    "wave": "0..1.0.1.0.."},
+      {"name": "paddr",      "wave": "x.2..x3..x..", "data": ["0x02 (TDR)", "0x02 (TDR)"]},
+      {"name": "pwdata",     "wave": "x.2..x......", "data": ["DATA_IN"]},
+      {"name": "pready",     "wave": "0...10..10.."},
+      {"name": "prdata",     "wave": "x.......2x..", "data": ["DATA_IN"]}
+    ],
+    {},
+    ["Internal Logic",
+      {"name": "wr_tdr",     "wave": "0...10......"},
+      {"name": "rd_tdr",     "wave": "0.......10.."}
+    ],
+    {},
+    ["Data",
+      {"name": "tdr",        "wave": "2....3......", "data": ["8'h00", "DATA_IN"]}
+    ]
+  ],
+  "head": {
+    "text": "Read data case",
+    "tick": 0
+  }
+}

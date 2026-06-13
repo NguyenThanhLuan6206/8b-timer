@@ -1,0 +1,196 @@
+# vsim -sv_seed 1 -coverage -coveranalysis -debugDB -l rw_chk_1.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit rw_chk.ucdb; log -r /*;run -all;" "+TESTNAME=rw_chk" 
+# Start time: 13:53:17 on Jun 13,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.APB_SLAVE(fast)
+# Loading work.TCR(fast)
+# Loading work.TSR(fast)
+# Loading work.TDR(fast)
+# Loading work.TIE(fast)
+# Loading work.CLK_DIV(fast)
+# Loading work.COUNTER(fast)
+# Loading work.INTERRUPT(fast)
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pslverr', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 27
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/int_signal', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 26
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/prdata', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 25
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pready', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 24
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit rw_chk.ucdb
+#  log -r /*
+# run -all
+# testname provided: rw_chk
+# 101000: [ENV] Build environment
+# 101000: [ENV] Start running environment
+# 101000: [STIMULUS] Start running STIMULUS
+# 101000: [SCOREBOARD] Start running SCOREBOARD
+# ===========================
+# =========RW CHECK==========
+# ===========================
+# =======TCR RW CHECK=======
+# 101080: [BASE] Start calling write task
+# 101080: [BASE] Start sending packet
+# 101080: [STIMULUS] Sent packet to driver
+# 101080: [DRIVER] Start getting packet from STIMULUS
+# 170001: [BASE] Done write task
+# 170001: [BASE] Start calling read task
+# 170001: [BASE] Start sending packet
+# 170002: [STIMULUS] Sent packet to driver
+# 170002: [DRIVER] Start getting packet from STIMULUS
+# 250001: [BASE] Done read task
+# 250001: [COMPARATOR] PASS at 0
+# 250041: [BASE] Start calling write task
+# 250041: [BASE] Start sending packet
+# 250041: [STIMULUS] Sent packet to driver
+# 250041: [DRIVER] Start getting packet from STIMULUS
+# 330001: [BASE] Done write task
+# 330001: [BASE] Start calling read task
+# 330001: [BASE] Start sending packet
+# 330002: [STIMULUS] Sent packet to driver
+# 330002: [DRIVER] Start getting packet from STIMULUS
+# 410001: [BASE] Done read task
+# 410001: [COMPARATOR] PASS at 0
+# 410041: [BASE] Start calling write task
+# 410041: [BASE] Start sending packet
+# 410041: [STIMULUS] Sent packet to driver
+# 410041: [DRIVER] Start getting packet from STIMULUS
+# 490001: [BASE] Done write task
+# 490001: [BASE] Start calling read task
+# 490001: [BASE] Start sending packet
+# 490002: [STIMULUS] Sent packet to driver
+# 490002: [DRIVER] Start getting packet from STIMULUS
+# 570001: [BASE] Done read task
+# 570001: [COMPARATOR] PASS at 0
+# =======TSR RW CHECK=======
+# 570041: [BASE] Start calling write task
+# 570041: [BASE] Start sending packet
+# 570041: [STIMULUS] Sent packet to driver
+# 570041: [DRIVER] Start getting packet from STIMULUS
+# 650001: [BASE] Done write task
+# 650001: [BASE] Start calling read task
+# 650001: [BASE] Start sending packet
+# 650002: [STIMULUS] Sent packet to driver
+# 650002: [DRIVER] Start getting packet from STIMULUS
+# 730001: [BASE] Done read task
+# 730001: [COMPARATOR] PASS at 1
+# 730041: [BASE] Start calling write task
+# 730041: [BASE] Start sending packet
+# 730041: [STIMULUS] Sent packet to driver
+# 730041: [DRIVER] Start getting packet from STIMULUS
+# 810001: [BASE] Done write task
+# 810001: [BASE] Start calling read task
+# 810001: [BASE] Start sending packet
+# 810002: [STIMULUS] Sent packet to driver
+# 810002: [DRIVER] Start getting packet from STIMULUS
+# 890001: [BASE] Done read task
+# 890001: [COMPARATOR] PASS at 1
+# 890041: [BASE] Start calling write task
+# 890041: [BASE] Start sending packet
+# 890041: [STIMULUS] Sent packet to driver
+# 890041: [DRIVER] Start getting packet from STIMULUS
+# 970001: [BASE] Done write task
+# 970001: [BASE] Start calling read task
+# 970001: [BASE] Start sending packet
+# 970002: [STIMULUS] Sent packet to driver
+# 970002: [DRIVER] Start getting packet from STIMULUS
+# 1050001: [BASE] Done read task
+# 1050001: [COMPARATOR] PASS at 1
+# =======TDR RW CHECK=======
+# 1050041: [BASE] Start calling write task
+# 1050041: [BASE] Start sending packet
+# 1050041: [STIMULUS] Sent packet to driver
+# 1050041: [DRIVER] Start getting packet from STIMULUS
+# 1130001: [BASE] Done write task
+# 1130001: [BASE] Start calling read task
+# 1130001: [BASE] Start sending packet
+# 1130002: [STIMULUS] Sent packet to driver
+# 1130002: [DRIVER] Start getting packet from STIMULUS
+# 1210001: [BASE] Done read task
+# 1210001: [COMPARATOR] PASS at 2
+# 1210041: [BASE] Start calling write task
+# 1210041: [BASE] Start sending packet
+# 1210041: [STIMULUS] Sent packet to driver
+# 1210041: [DRIVER] Start getting packet from STIMULUS
+# 1290001: [BASE] Done write task
+# 1290001: [BASE] Start calling read task
+# 1290001: [BASE] Start sending packet
+# 1290002: [STIMULUS] Sent packet to driver
+# 1290002: [DRIVER] Start getting packet from STIMULUS
+# 1370001: [BASE] Done read task
+# 1370001: [COMPARATOR] PASS at 2
+# 1370041: [BASE] Start calling write task
+# 1370041: [BASE] Start sending packet
+# 1370041: [STIMULUS] Sent packet to driver
+# 1370041: [DRIVER] Start getting packet from STIMULUS
+# 1450001: [BASE] Done write task
+# 1450001: [BASE] Start calling read task
+# 1450001: [BASE] Start sending packet
+# 1450002: [STIMULUS] Sent packet to driver
+# 1450002: [DRIVER] Start getting packet from STIMULUS
+# 1530001: [BASE] Done read task
+# 1530001: [COMPARATOR] PASS at 2
+# =======TIE RW CHECK=======
+# 1530041: [BASE] Start calling write task
+# 1530041: [BASE] Start sending packet
+# 1530041: [STIMULUS] Sent packet to driver
+# 1530041: [DRIVER] Start getting packet from STIMULUS
+# 1610001: [BASE] Done write task
+# 1610001: [BASE] Start calling read task
+# 1610001: [BASE] Start sending packet
+# 1610002: [STIMULUS] Sent packet to driver
+# 1610002: [DRIVER] Start getting packet from STIMULUS
+# 1690001: [BASE] Done read task
+# 1690001: [COMPARATOR] PASS at 3
+# 1690041: [BASE] Start calling write task
+# 1690041: [BASE] Start sending packet
+# 1690041: [STIMULUS] Sent packet to driver
+# 1690041: [DRIVER] Start getting packet from STIMULUS
+# 1770001: [BASE] Done write task
+# 1770001: [BASE] Start calling read task
+# 1770001: [BASE] Start sending packet
+# 1770002: [STIMULUS] Sent packet to driver
+# 1770002: [DRIVER] Start getting packet from STIMULUS
+# 1850001: [BASE] Done read task
+# 1850001: [COMPARATOR] PASS at 3
+# 1850041: [BASE] Start calling write task
+# 1850041: [BASE] Start sending packet
+# 1850041: [STIMULUS] Sent packet to driver
+# 1850041: [DRIVER] Start getting packet from STIMULUS
+# 1930001: [BASE] Done write task
+# 1930001: [BASE] Start calling read task
+# 1930001: [BASE] Start sending packet
+# 1930002: [STIMULUS] Sent packet to driver
+# 1930002: [DRIVER] Start getting packet from STIMULUS
+# 2010001: [BASE] Done read task
+# 2010001: [COMPARATOR] PASS at 3
+# 1000101000: [TEST RESULT] TEST PASSED - All 12 tests passed
+# 1000101000: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(35)
+#    Time: 1000101 ns  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 13:53:20 on Jun 13,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 4

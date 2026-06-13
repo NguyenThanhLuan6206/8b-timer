@@ -1,0 +1,25 @@
+# ModelSim/Questa
+work/
+*.wlf
+*.dbg
+*.ucdb
+transcript
+modelsim.ini
+vsim.dbg
+
+# Simulation logs
+sim/log/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
