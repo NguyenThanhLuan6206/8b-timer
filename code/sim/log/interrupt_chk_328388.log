@@ -1,0 +1,148 @@
+# vsim -suppress 12110 -sv_seed 328388 -coverage -coveranalysis -debugDB -l interrupt_chk_328388.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit interrupt_chk.ucdb; log -r /*;run -all;" "+TESTNAME=interrupt_chk" 
+# Start time: 12:10:08 on Jun 14,2026
+# ** Warning: (vsim-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if
+# Loading work.timer_pkg
+# Loading work.test_pkg
+# Loading work.testbench
+# Loading work.timer_top
+# Loading work.APB_SLAVE
+# Loading work.TCR
+# Loading work.TSR
+# Loading work.TDR
+# Loading work.TIE
+# Loading work.CLK_DIV
+# Loading work.COUNTER
+# Loading work.INTERRUPT
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pslverr', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 27
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/int_signal', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 26
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/prdata', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 25
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pready', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 24
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
+# coverage save -codeAll -cvg -onexit interrupt_chk.ucdb
+#  log -r /*
+# run -all
+# testname provided: interrupt_chk
+# 101000: [ENV] Build environment
+# 101000: [ENV] Start running environment
+# 101000: [STIMULUS] Start running STIMULUS
+# 101000: [SCOREBOARD] Start running SCOREBOARD
+# ===========================
+# =====Interrupt CHECK=======
+# ===========================
+# ====disable interrupt overflow====
+# 101040: [BASE] Start calling write task
+# 101040: [BASE] Start sending packet
+# 101040: [STIMULUS] Sent packet to driver
+# 101040: [DRIVER] Start getting packet from STIMULUS
+# 170001: [BASE] Done write task
+# 170001: [BASE] Start calling write task
+# 170001: [BASE] Start sending packet
+# 170002: [STIMULUS] Sent packet to driver
+# 170002: [DRIVER] Start getting packet from STIMULUS
+# 250001: [BASE] Done write task
+# 250001: [BASE] Start calling write task
+# 250001: [BASE] Start sending packet
+# 250002: [STIMULUS] Sent packet to driver
+# 250002: [DRIVER] Start getting packet from STIMULUS
+# 330001: [BASE] Done write task
+# 330001: [BASE] Start calling write task
+# 330001: [BASE] Start sending packet
+# 330002: [STIMULUS] Sent packet to driver
+# 330002: [DRIVER] Start getting packet from STIMULUS
+# 410001: [BASE] Done write task
+# 445001: [BASE] Start calling write task
+# 445001: [BASE] Start sending packet
+# 445001: [STIMULUS] Sent packet to driver
+# 445001: [DRIVER] Start getting packet from STIMULUS
+# 510001: [BASE] Done write task
+# 510001: [interrupt check] PASS TEST
+# ====enable interrupt overflow====
+# 510041: [BASE] Start calling write task
+# 510041: [BASE] Start sending packet
+# 510041: [STIMULUS] Sent packet to driver
+# 510041: [DRIVER] Start getting packet from STIMULUS
+# 590001: [BASE] Done write task
+# 590001: [BASE] Start calling write task
+# 590001: [BASE] Start sending packet
+# 590002: [STIMULUS] Sent packet to driver
+# 590002: [DRIVER] Start getting packet from STIMULUS
+# 670001: [BASE] Done write task
+# 670001: [BASE] Start calling write task
+# 670001: [BASE] Start sending packet
+# 670002: [STIMULUS] Sent packet to driver
+# 670002: [DRIVER] Start getting packet from STIMULUS
+# 750001: [BASE] Done write task
+# 750001: [BASE] Start calling write task
+# 750001: [BASE] Start sending packet
+# 750002: [STIMULUS] Sent packet to driver
+# 750002: [DRIVER] Start getting packet from STIMULUS
+# 830001: [BASE] Done write task
+# 830001: [BASE] Start calling write task
+# 830001: [BASE] Start sending packet
+# 830002: [STIMULUS] Sent packet to driver
+# 830002: [DRIVER] Start getting packet from STIMULUS
+# 910001: [BASE] Done write task
+# 945001: [BASE] Start calling write task
+# 945001: [BASE] Start sending packet
+# 945001: [STIMULUS] Sent packet to driver
+# 945001: [DRIVER] Start getting packet from STIMULUS
+# 1010001: [BASE] Done write task
+# 1010001: [interrupt check] PASS TEST
+# ====disable interrupt underflow====
+# 1010041: [BASE] Start calling write task
+# 1010041: [BASE] Start sending packet
+# 1010041: [STIMULUS] Sent packet to driver
+# 1010041: [DRIVER] Start getting packet from STIMULUS
+# 1090001: [BASE] Done write task
+# 1125001: [BASE] Start calling write task
+# 1125001: [BASE] Start sending packet
+# 1125001: [STIMULUS] Sent packet to driver
+# 1125001: [DRIVER] Start getting packet from STIMULUS
+# 1190001: [BASE] Done write task
+# 1190001: [interrupt check] PASS TEST
+# ====enable interrupt underflow====
+# 1190041: [BASE] Start calling write task
+# 1190041: [BASE] Start sending packet
+# 1190041: [STIMULUS] Sent packet to driver
+# 1190041: [DRIVER] Start getting packet from STIMULUS
+# 1270001: [BASE] Done write task
+# 1270001: [BASE] Start calling write task
+# 1270001: [BASE] Start sending packet
+# 1270002: [STIMULUS] Sent packet to driver
+# 1270002: [DRIVER] Start getting packet from STIMULUS
+# 1350001: [BASE] Done write task
+# 1385001: [BASE] Start calling write task
+# 1385001: [BASE] Start sending packet
+# 1385001: [STIMULUS] Sent packet to driver
+# 1385001: [DRIVER] Start getting packet from STIMULUS
+# 1450001: [BASE] Done write task
+# 1450001: [interrupt check] PASS TEST
+# 1000101000: [TEST RESULT] TEST PASSED - All 4 tests passed
+# 1000101000: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(35)
+#    Time: 1000101 ns  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 12:10:10 on Jun 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 5

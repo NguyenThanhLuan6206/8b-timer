@@ -3,6 +3,7 @@ class rst_cnt extends base_test;
         super.new();
     endfunction
     task run_scenario;  
+        test_count = 4;
         $display("============================");
         $display("=====Reset Count CHECK======");
         $display("============================");

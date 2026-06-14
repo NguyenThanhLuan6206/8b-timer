@@ -1,6 +1,7 @@
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-Start time: 13:53:15 on Jun 13,2026
-vlog -coveropt 3 "+cover=bcestf" -sv -f compile.f 
+** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+Start time: 12:09:54 on Jun 14,2026
+vlog -suppress 12110 -coveropt 3 "+cover=bcestf" -sv -f compile.f 
 -- Compiling module APB_SLAVE
 -- Compiling module CLK_DIV
 -- Compiling module COUNTER
@@ -19,5 +20,5 @@ vlog -coveropt 3 "+cover=bcestf" -sv -f compile.f
 
 Top level modules:
 	testbench
-End time: 13:53:15 on Jun 13,2026, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
+End time: 12:09:55 on Jun 14,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 1

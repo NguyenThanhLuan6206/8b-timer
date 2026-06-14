@@ -12,8 +12,8 @@ module INTERRUPT (
   output logic int_signal
 );
   logic s_ovf, s_udf;
-  logic ovf_1_delay, ovf_2_delay, ovf_3_delay, ovf_4_delay;
-  logic udf_1_delay, udf_2_delay, udf_3_delay, udf_4_delay;
+  logic [3:0] ovf_delay;
+  logic [3:0] udf_delay;
 
   always_ff @(posedge ker_clk or negedge presetn) begin
     if (!presetn) begin
@@ -50,45 +50,27 @@ module INTERRUPT (
 
   always_ff @(posedge ker_clk or negedge presetn) begin
     if (!presetn) begin
-      ovf_1_delay <= 1'b0;
-      ovf_2_delay <= 1'b0;
-      ovf_3_delay <= 1'b0;
-      ovf_4_delay <= 1'b0;
+      ovf_delay <= 4'b0000;
     end else if (s_ovf) begin
-      ovf_1_delay <= 1'b1;
-      ovf_2_delay <= 1'b1;
-      ovf_3_delay <= 1'b1;
-      ovf_4_delay <= 1'b1;
+      ovf_delay <= 4'b1111;
     end else begin
-      ovf_1_delay <= 1'b0;
-      ovf_2_delay <= ovf_1_delay;
-      ovf_3_delay <= ovf_2_delay;
-      ovf_4_delay <= ovf_3_delay;
+      ovf_delay <= {ovf_delay[2:0], 1'b0};
     end
   end
 
-  assign s_ovf_stretched = ovf_1_delay | ovf_2_delay | ovf_3_delay | ovf_4_delay;
+  assign s_ovf_stretched = ovf_delay[0] | ovf_delay[1] | ovf_delay[2] | ovf_delay[3];
 
 
   always_ff @(posedge ker_clk or negedge presetn) begin
     if (!presetn) begin
-      udf_1_delay <= 1'b0;
-      udf_2_delay <= 1'b0;
-      udf_3_delay <= 1'b0;
-      udf_4_delay <= 1'b0;
+      udf_delay <= 4'b0000;
     end else if (s_udf) begin
-      udf_1_delay <= 1'b1;
-      udf_2_delay <= 1'b1;
-      udf_3_delay <= 1'b1;
-      udf_4_delay <= 1'b1;
+      udf_delay <= 4'b1111;
     end else begin
-      udf_1_delay <= 1'b0;
-      udf_2_delay <= udf_1_delay;
-      udf_3_delay <= udf_2_delay;
-      udf_4_delay <= udf_3_delay;
+      udf_delay <= {udf_delay[2:0], 1'b0};
     end
   end
 
-  assign s_udf_stretched = udf_1_delay | udf_2_delay | udf_3_delay | udf_4_delay;
+  assign s_udf_stretched = udf_delay[0] | udf_delay[1] | udf_delay[2] | udf_delay[3];
 
 endmodule

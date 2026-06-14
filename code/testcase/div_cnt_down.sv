@@ -5,6 +5,7 @@ class div_cnt_down extends base_test;
 
     virtual task run_scenario();
         time t1, t2;     
+        test_count = 4;
         $display("================================");
         $display("==TEST 1: COUNTDOWN - NO DIV ===");
         $display("================================");
@@ -27,9 +28,10 @@ class div_cnt_down extends base_test;
         $display("%0t: [div_cnt_down] TEST1: Underflow interrupt detected at t2=%0t", $time, t2);
         
         if (t2 - t1 >= (256*5 - 20)*1000 && t2 - t1 <= (256*5 + 20)*1000) begin
-            $display("%0t: [div_cnt_down] TEST PASSED 1: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            $display("%0t: [div_cnt_down] PASS TEST 1: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            pass_count = pass_count + 1;
         end else begin
-            $display("%0t: [div_cnt_down] TEST FAILED 1: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5-20)*1000, (256*5+20)*1000, t2-t1);
+            $display("%0t: [div_cnt_down] FAIL TEST 1: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5-20)*1000, (256*5+20)*1000, t2-t1);
         end
         write(8'h00, 8'h00); // disable counting
 
@@ -54,9 +56,10 @@ class div_cnt_down extends base_test;
         $display("%0t: [div_cnt_down] TEST2: Underflow interrupt detected at t2=%0t", $time, t2);
         
         if (t2 - t1 >= (256*5*2 - 26)*1000 && t2 - t1 <= (256*5*2 + 26)*1000) begin
-            $display("%0t: [div_cnt_down] TEST PASSED 2: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            $display("%0t: [div_cnt_down] PASS TEST 2: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            pass_count = pass_count + 1;
         end else begin
-            $display("%0t: [div_cnt_down] TEST FAILED 2: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*2-26)*1000, (256*5*2+26)*1000, t2-t1);
+            $display("%0t: [div_cnt_down] FAIL TEST 2: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*2-26)*1000, (256*5*2+26)*1000, t2-t1);
         end
         write(8'h00, 8'h00); // disable counting
 
@@ -81,9 +84,10 @@ class div_cnt_down extends base_test;
         $display("%0t: [div_cnt_down] TEST3: Underflow interrupt detected at t2=%0t", $time, t2);
         
         if (t2 - t1 >= (256*5*4 - 51)*1000 && t2 - t1 <= (256*5*4 + 51)*1000) begin
-            $display("%0t: [div_cnt_down] TEST PASSED 3: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            $display("%0t: [div_cnt_down] PASS TEST 3: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            pass_count = pass_count + 1;
         end else begin
-            $display("%0t: [div_cnt_down] TEST FAILED 3: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*4-51)*1000, (256*5*4+51)*1000, t2-t1);
+            $display("%0t: [div_cnt_down] FAIL TEST 3: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*4-51)*1000, (256*5*4+51)*1000, t2-t1);
         end
         write(8'h00, 8'h00); // disable counting
 
@@ -108,9 +112,10 @@ class div_cnt_down extends base_test;
         $display("%0t: [div_cnt_down] TEST4: Underflow interrupt detected at t2=%0t", $time, t2);
         
         if (t2 - t1 >= (256*5*8 - 102)*1000 && t2 - t1 <= (256*5*8 + 102)*1000) begin
-            $display("%0t: [div_cnt_down] TEST PASSED 4: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            $display("%0t: [div_cnt_down] PASS TEST 4: Counter interrupt timing is correct (delta=%0t ps)", $time, t2-t1);
+            pass_count = pass_count + 1;
         end else begin
-            $display("%0t: [div_cnt_down] TEST FAILED 4: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*8-102)*1000, (256*5*8+102)*1000, t2-t1);
+            $display("%0t: [div_cnt_down] FAIL TEST 4: Timing incorrect. Expected [%0d, %0d]ps, got %0t ps", $time, (256*5*8-102)*1000, (256*5*8+102)*1000, t2-t1);
         end
         write(8'h00, 8'h00); // disable counting
 

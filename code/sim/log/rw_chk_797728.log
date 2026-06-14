@@ -1,7 +1,6 @@
-# vsim -sv_seed 1 -coverage -coveranalysis -debugDB -l rw_chk_1.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit rw_chk.ucdb; log -r /*;run -all;" "+TESTNAME=rw_chk" 
-# Start time: 13:53:17 on Jun 13,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vsim-8611) Generating debug db.
+# vsim -suppress 12110 -sv_seed 797728 -coverage -coveranalysis -debugDB -l rw_chk_797728.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit rw_chk.ucdb; log -r /*;run -all;" "+TESTNAME=rw_chk" 
+# Start time: 12:09:58 on Jun 14,2026
+# ** Warning: (vsim-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -17,20 +16,19 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.dut_if(fast)
-# Loading work.timer_pkg(fast)
-# Loading work.test_pkg(fast)
-# Loading work.testbench(fast)
-# Loading work.dut_if(fast)
-# Loading work.timer_top(fast)
-# Loading work.APB_SLAVE(fast)
-# Loading work.TCR(fast)
-# Loading work.TSR(fast)
-# Loading work.TDR(fast)
-# Loading work.TIE(fast)
-# Loading work.CLK_DIV(fast)
-# Loading work.COUNTER(fast)
-# Loading work.INTERRUPT(fast)
+# Loading work.dut_if
+# Loading work.timer_pkg
+# Loading work.test_pkg
+# Loading work.testbench
+# Loading work.timer_top
+# Loading work.APB_SLAVE
+# Loading work.TCR
+# Loading work.TSR
+# Loading work.TDR
+# Loading work.TIE
+# Loading work.CLK_DIV
+# Loading work.COUNTER
+# Loading work.INTERRUPT
 # ** Warning: (vsim-3839) Variable '/testbench/d_if/pslverr', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 27
 # ** Warning: (vsim-3839) Variable '/testbench/d_if/int_signal', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
@@ -40,6 +38,8 @@
 # ** Warning: (vsim-3839) Variable '/testbench/d_if/pready', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 24
 # ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
 # coverage save -codeAll -cvg -onexit rw_chk.ucdb
 #  log -r /*
 # run -all
@@ -192,5 +192,5 @@
 # ** Note: $finish    : ../testcase/base_test.sv(35)
 #    Time: 1000101 ns  Iteration: 0  Instance: /testbench
 # Saving coverage database on exit...
-# End time: 13:53:20 on Jun 13,2026, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 4
+# End time: 12:10:00 on Jun 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 5

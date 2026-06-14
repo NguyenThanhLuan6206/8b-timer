@@ -1,0 +1,139 @@
+# vsim -suppress 12110 -sv_seed 795219 -coverage -coveranalysis -debugDB -l div_cnt_795219.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit div_cnt.ucdb; log -r /*;run -all;" "+TESTNAME=div_cnt" 
+# Start time: 12:10:23 on Jun 14,2026
+# ** Warning: (vsim-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if
+# Loading work.timer_pkg
+# Loading work.test_pkg
+# Loading work.testbench
+# Loading work.timer_top
+# Loading work.APB_SLAVE
+# Loading work.TCR
+# Loading work.TSR
+# Loading work.TDR
+# Loading work.TIE
+# Loading work.CLK_DIV
+# Loading work.COUNTER
+# Loading work.INTERRUPT
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pslverr', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 27
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/int_signal', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 26
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/prdata', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 25
+# ** Warning: (vsim-3839) Variable '/testbench/d_if/pready', driven via a port connection, is multiply driven. See ../tb/testbench.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/d_if File: ../tb/dut_interface.sv Line: 24
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
+# coverage save -codeAll -cvg -onexit div_cnt.ucdb
+#  log -r /*
+# run -all
+# testname provided: div_cnt
+# 101000: [ENV] Build environment
+# 101000: [ENV] Start running environment
+# 101000: [STIMULUS] Start running STIMULUS
+# 101000: [SCOREBOARD] Start running SCOREBOARD
+# ==============================
+# ==TEST 1: DIVIDED BY 0 CHECK==
+# ==============================
+# 101040: [BASE] Start calling write task
+# 101040: [BASE] Start sending packet
+# 101040: [STIMULUS] Sent packet to driver
+# 101040: [DRIVER] Start getting packet from STIMULUS
+# 170001: [BASE] Done write task
+# 170001: [BASE] Start calling write task
+# 170001: [BASE] Start sending packet
+# 170002: [STIMULUS] Sent packet to driver
+# 170002: [DRIVER] Start getting packet from STIMULUS
+# 250001: [BASE] Done write task
+# 1550000: [div_cnt] PASS TEST 1: Counter interrupt timing is correct (delta=1295000 ns)
+# 1550000: [BASE] Start calling write task
+# 1550000: [BASE] Start sending packet
+# 1550000: [STIMULUS] Sent packet to driver
+# 1550000: [DRIVER] Start getting packet from STIMULUS
+# 1630001: [BASE] Done write task
+# ==============================
+# ==TEST 2: DIVIDED BY 2 CHECK==
+# ==============================
+# 1630041: [BASE] Start calling write task
+# 1630041: [BASE] Start sending packet
+# 1630041: [STIMULUS] Sent packet to driver
+# 1630041: [DRIVER] Start getting packet from STIMULUS
+# 1710001: [BASE] Done write task
+# 1710001: [BASE] Start calling write task
+# 1710001: [BASE] Start sending packet
+# 1710002: [STIMULUS] Sent packet to driver
+# 1710002: [DRIVER] Start getting packet from STIMULUS
+# 1790001: [BASE] Done write task
+# 1795000: [div_cnt] Started counting with divide by 2 at t1=1795000
+# 4370000: [div_cnt] Overflow interrupt detected at t2=4370000
+# 4370000: [div_cnt] PASS TEST 2: Counter interrupt timing is correct (delta=2575000 ns)
+# 4370000: [BASE] Start calling write task
+# 4370000: [BASE] Start sending packet
+# 4370000: [STIMULUS] Sent packet to driver
+# 4370000: [DRIVER] Start getting packet from STIMULUS
+# 4450001: [BASE] Done write task
+# ==============================
+# ==TEST 3: DIVIDED BY 4 CHECK==
+# ==============================
+# 4450041: [BASE] Start calling write task
+# 4450041: [BASE] Start sending packet
+# 4450041: [STIMULUS] Sent packet to driver
+# 4450041: [DRIVER] Start getting packet from STIMULUS
+# 4530001: [BASE] Done write task
+# 4530001: [BASE] Start calling write task
+# 4530001: [BASE] Start sending packet
+# 4530002: [STIMULUS] Sent packet to driver
+# 4530002: [DRIVER] Start getting packet from STIMULUS
+# 4610001: [BASE] Done write task
+# 4615000: [div_cnt] Started counting with divide by 4 at t1=4615000
+# 9750000: [div_cnt] Overflow interrupt detected at t2=9750000
+# 9750000: [div_cnt] PASS TEST 3: Counter interrupt timing is correct (delta=5135000 ns)
+# 9750000: [BASE] Start calling write task
+# 9750000: [BASE] Start sending packet
+# 9750000: [STIMULUS] Sent packet to driver
+# 9750000: [DRIVER] Start getting packet from STIMULUS
+# 9830001: [BASE] Done write task
+# ==============================
+# ==TEST 4: DIVIDED BY 8 CHECK==
+# ==============================
+# 9830041: [BASE] Start calling write task
+# 9830041: [BASE] Start sending packet
+# 9830041: [STIMULUS] Sent packet to driver
+# 9830041: [DRIVER] Start getting packet from STIMULUS
+# 9910001: [BASE] Done write task
+# 9910001: [BASE] Start calling write task
+# 9910001: [BASE] Start sending packet
+# 9910002: [STIMULUS] Sent packet to driver
+# 9910002: [DRIVER] Start getting packet from STIMULUS
+# 9990001: [BASE] Done write task
+# 9995000: [div_cnt] Started counting with divide by 8 at t1=9995000
+# 20250000: [div_cnt] Overflow interrupt detected at t2=20250000
+# 20250000: [div_cnt] PASS TEST 4: Counter interrupt timing is correct (delta=10255000 ns)
+# 20250000: [BASE] Start calling write task
+# 20250000: [BASE] Start sending packet
+# 20250000: [STIMULUS] Sent packet to driver
+# 20250000: [DRIVER] Start getting packet from STIMULUS
+# 20330001: [BASE] Done write task
+# 1000101000: [TEST RESULT] TEST PASSED - All 4 tests passed
+# 1000101000: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(35)
+#    Time: 1000101 ns  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 12:10:25 on Jun 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 5

@@ -1,0 +1,22 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 11
+Passed            : 11
+Failed            : 0
+Unknown           : 0
+Used time         : 38s
+-----------------------------------------------------------
+Run log detail:
+log/TSR_clr_368033.log: => Passed
+log/div_cnt_795219.log: => Passed
+log/div_cnt_down_601000.log: => Passed
+log/init_chk_297737.log: => Passed
+log/interrupt_chk_328388.log: => Passed
+log/ld_cnt_361292.log: => Passed
+log/reversed_chk_927769.log: => Passed
+log/rst_cnt_904223.log: => Passed
+log/rst_fly_461621.log: => Passed
+log/rw_chk_797728.log: => Passed
+log/std_cnt_351542.log: => Passed
+-----------------------------------------------------------

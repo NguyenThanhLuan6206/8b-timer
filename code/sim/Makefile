@@ -30,16 +30,16 @@ build:
 	mkdir -p log
 	vlib work
 	vmap work work
-	vlog ${CMP_COV_OPT} -sv -f compile.f | tee compile.log
+	vlog -suppress 12110 ${CMP_COV_OPT} -sv -f compile.f | tee compile.log
 run:
-	vsim -sv_seed $(SEED_RAND) ${SIM1_COV_OPT} -debugDB -l $(TESTNAME)_$(SEED_RAND).log -voptargs=+acc -assertdebug -c $(TB_NAME) -do "${SIM2_COV_OPT} log -r /*;run -all;" +TESTNAME=$(TESTNAME)
+	vsim -suppress 12110 -sv_seed $(SEED_RAND) ${SIM1_COV_OPT} -debugDB -l $(TESTNAME)_$(SEED_RAND).log -voptargs=+acc -assertdebug -c $(TB_NAME) -do "${SIM2_COV_OPT} log -r /*;run -all;" +TESTNAME=$(TESTNAME)
 	mv $(TESTNAME)_$(SEED_RAND).log log
 	cp -rf  vsim.wlf log/$(TESTNAME)_$(SEED_RAND).wlf
 	ln -sf log/$(TESTNAME)_$(SEED_RAND).log run.log
 wave:
-	vsim -i -view vsim.wlf -do "add wave vsim:/$(TB_NAME)/*; radix -$(RADIX)" &
+	vsim -suppress 12110 -i -view vsim.wlf -do "add wave vsim:/$(TB_NAME)/*; radix -$(RADIX)" &
 cov_gui:
-	vsim -i -viewcov ${TESTNAME}.ucdb &
+	vsim -suppress 12110 -i -viewcov ${TESTNAME}.ucdb &
 cov_merge:
 	vcover merge IP_MERGE.ucdb *.ucdb
 clean:
